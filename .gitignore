@@ -1,0 +1,6 @@
+volumes/build/*
+!volumes/build/.gitkeep
+volumes/home/*
+!volumes/home/.bashrc
+volumes/zmk/*
+!volumes/zmk/.gitkeep
