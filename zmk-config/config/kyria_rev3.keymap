@@ -32,13 +32,13 @@
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   -  |
             // |   `   |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MO 2   |   F13   |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   |   _  |
-            //                     | GUI  | GUI  | CRTL |  BKSP   |   DEL   |  |  RETURN |  SPACE  | MO 1 |L SHIFT| R-ALT |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT |   F13   |  |  MO 3   | L SHIFT |  N   |  M    |  ,    |  .   |   /   |   _  |
+            //                     | GUI  | GUI  | CTRL |  BKSP   |   DEL   |  |  RETURN |  SPACE  | MO 1 | MO 2  | R-ALT |
             bindings = <
             &kp TAB    &kp Q &kp W &kp E &kp R &kp T                                                 &kp Y  &kp U &kp I     &kp O   &kp P    &kp MINUS
             &kp GRAVE  &kp A &kp S &kp D &kp F &kp G                                                 &kp H  &kp J &kp K     &kp L   &kp SEMI &kp SQT
-            &kp LSHFT  &kp Z &kp X &kp C &kp V &kp B    &mo 2 &kp F13           &kp LSHFT &kp LSHFT &kp N  &kp M &kp COMMA &kp DOT &kp FSLH &kp UNDERSCORE
-                                  &kp LGUI &kp LGUI &kp LCTRL &kp BSPC &kp DEL   &kp RET &kp SPACE &mo 1 &kp LSHFT &kp RALT
+            &kp LSHFT  &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp F13              &mo 3 &kp LSHFT &kp N  &kp M &kp COMMA &kp DOT &kp FSLH &kp UNDERSCORE
+                                  &kp LGUI &kp LGUI &kp LCTRL &kp BSPC &kp DEL   &kp RET &kp SPACE &mo 1 &mo 2 &kp RALT
             >;
         };
 
@@ -53,6 +53,20 @@
             &kp TILDE &kp HASH &kp DLLR &kp LPAR &kp RPAR &kp EQUAL                                 &kp LEFT &kp DOWN &kp UP &kp RIGHT &thick_arrow &kp K_VOL_UP
             &kp PIPE  &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp STAR &trans &trans    &trans &trans &none &kp K_PREV &kp K_PP &kp K_NEXT &thin_arrow &kp K_VOL_DN
                                                 &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+            >;
+        };
+
+        number_and_function_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |      |  F1  |  F2  |  F3  |  F4  |  F5  |                                          |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |
+            // |PrtScr|   1  |   2  |   3  |   4  |   5  |                                          |   6  |   7  |   8  |   9  |   0  |  F12 |
+            // |      |      |      |      |      |      |      |      |              |      |      | HOME | PGDN | PGUP |  END | noop | C-F5 |
+            //                      |      |      |      |      |      |              |      |      |      |      |      |
+            bindings = <
+            &trans     &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                                            &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+            &kp PSCRN  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                                            &kp N6 &kp N7 &kp N8 &kp N9 &kp N0  &kp F12
+            &trans &trans &trans &trans &trans &trans &trans &trans               &trans &trans &kp HOME &kp PG_DN &kp PG_UP &kp END &none &kp LC(F5)
+                                            &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
             >;
         };
 
