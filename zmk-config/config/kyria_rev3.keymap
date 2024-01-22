@@ -32,12 +32,12 @@
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   -  |
             // |   `   |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT |   F13   |  |  MO 3   | L SHIFT |  N   |  M    |  ,    |  .   |   /   |   _  |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT |   F13   |  |  MO 3   |  TOG 4  |  N   |  M    |  ,    |  .   |   /   |   _  |
             //                     | GUI  | GUI  | CTRL |  BKSP   |   DEL   |  |  RETURN |  SPACE  | MO 1 | MO 2  | R-ALT |
             bindings = <
             &kp TAB    &kp Q &kp W &kp E &kp R &kp T                                                 &kp Y  &kp U &kp I     &kp O   &kp P    &kp MINUS
             &kp GRAVE  &kp A &kp S &kp D &kp F &kp G                                                 &kp H  &kp J &kp K     &kp L   &kp SEMI &kp SQT
-            &kp LSHFT  &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp F13              &mo 3 &kp LSHFT &kp N  &kp M &kp COMMA &kp DOT &kp FSLH &kp UNDERSCORE
+            &kp LSHFT  &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp F13                  &mo 3 &tog 4 &kp N  &kp M &kp COMMA &kp DOT &kp FSLH &kp UNDERSCORE
                                   &kp LGUI &kp LGUI &kp LCTRL &kp BSPC &kp DEL   &kp RET &kp SPACE &mo 1 &mo 2 &kp RALT
             >;
         };
@@ -81,6 +81,20 @@
             &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                   &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans &bt BT_CLR                 &trans &trans &trans &trans &trans &trans &trans &trans
                                  &trans &trans &trans &trans &trans                     &trans &trans &trans &trans &trans
+            >;
+        };
+
+        gaming_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |  TAB  |  A  |  W  |  E   |  R   |  T   |                                            |      |      |      |      |      |      |
+            // | SHIFT |  Z  |  S  |  D   |  F   |  G   |                                            |      |      |      |      |      |      |
+            // | CTRL  |  Q  |  X  |  C   |  V   |  B   |  3   |  4   |                |      | TOG 4|      |      |      |      |      |      |
+            //                     | GUI  | ESC  | SPCE | BKSP | DEL  |                |      |      |      |      |      |
+            bindings = <
+            &kp TAB    &kp A  &kp W  &kp E  &kp R  &kp T                                              &trans &trans &trans &trans &trans &trans
+            &kp LSHFT  &kp Z  &kp S  &kp D  &kp F  &kp G                                              &trans &trans &trans &trans &trans &trans
+            &kp LCTRL  &kp Q  &kp X  &kp C  &kp V  &kp B &kp N3 &kp N4                  &trans &tog 4 &trans &trans &trans &trans &trans &trans
+                            &kp LGUI &kp ESC &kp SPACE &kp BSPC &kp DEL                 &trans &trans &trans &trans &trans
             >;
         };
     };
