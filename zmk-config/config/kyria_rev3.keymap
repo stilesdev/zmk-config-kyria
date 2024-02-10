@@ -118,12 +118,12 @@
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  TAB  |  A  |  W  |  E   |  R   |  T   |                                            |      |      |      |      |      |      |
             // | SHIFT |  Z  |  S  |  D   |  F   |  G   |                                            |      |      |      |      |      |      |
-            // | CTRL  |  Q  |  X  |  C   |  V   |  B   |  3   |  4   |                |      | TOG 4|      |      |      |      |      |      |
+            // | CTRL  |  Q  |  X  |  C   |  V   |  B   |  3   |  4   |                |      | TOG 5|      |      |      |      |      |      |
             //                     | GUI  | ESC  | SPCE | BKSP | DEL  |                |      |      |      |      |      |
             bindings = <
             &kp TAB    &kp A  &kp W  &kp E  &kp R  &kp T                                              &trans &trans &trans &trans &trans &trans
             &kp LSHFT  &kp Z  &kp S  &kp D  &kp F  &kp G                                              &trans &trans &trans &trans &trans &trans
-            &kp LCTRL  &kp Q  &kp X  &kp C  &kp V  &kp B &kp N3 &kp N4                  &trans &tog 4 &trans &trans &trans &trans &trans &trans
+            &kp LCTRL  &kp Q  &kp X  &kp C  &kp V  &kp B &kp N3 &kp N4                  &trans &tog 5 &trans &trans &trans &trans &trans &trans
                             &kp LGUI &kp ESC &kp SPACE &kp BSPC &kp DEL                 &trans &trans &trans &trans &trans
             >;
         };
