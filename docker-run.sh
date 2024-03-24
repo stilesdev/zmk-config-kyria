@@ -9,7 +9,7 @@ case "$1" in
         COMMAND="west init -l app/ && west update"
         ;;
     build)
-        COMMAND="west build -p -d build/left -b nice_nano_v2 -- -DSHIELD=kyria_rev3_left -DZMK_CONFIG='/workspaces/zmk-config/config' && west build -p -d build/right -b nice_nano_v2 -- -DSHIELD=kyria_rev3_right -DZMK_CONFIG='/workspaces/zmk-config/config' && cp build/left/zephyr/zmk.uf2 /workspaces/build/kyria_rev3_left.uf2 && cp build/right/zephyr/zmk.uf2 /workspaces/build/kyria_rev3_right.uf2"
+        COMMAND="west build -p -d build/left -b nice_nano_v2 -- -DSHIELD='kyria_rev3_left nice_view_adapter nice_view' -DZMK_CONFIG='/workspaces/zmk-config/config' && west build -p -d build/right -b nice_nano_v2 -- -DSHIELD='kyria_rev3_right nice_view_adapter nice_view' -DZMK_CONFIG='/workspaces/zmk-config/config' && cp build/left/zephyr/zmk.uf2 /workspaces/build/kyria_rev3_left.uf2 && cp build/right/zephyr/zmk.uf2 /workspaces/build/kyria_rev3_right.uf2"
         ;;
     rebuild)
         COMMAND="west build -d build/left && west build -d build/right && cp build/left/zephyr/zmk.uf2 /workspaces/build/kyria_rev3_left.uf2 && cp build/right/zephyr/zmk.uf2 /workspaces/build/kyria_rev3_right.uf2"
