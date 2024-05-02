@@ -31,5 +31,5 @@ docker run \
 -w "$WORKDIR" \
 --rm \
 -it \
-docker.io/zmkfirmware/zmk-dev-arm:3.2 \
+docker.io/zmkfirmware/zmk-dev-arm:3.5 \
 bash -c "source /root/.bashrc && $COMMAND"
